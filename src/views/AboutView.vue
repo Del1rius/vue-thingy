@@ -1,5 +1,10 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <AboutComp/>
 </template>
+
+<script>
+import AboutComp from '@/components/About-Comp.vue';
+export default {
+  components: {AboutComp}
+}
+</script>

@@ -1,16 +1,22 @@
 <template>
   <div>
     <NavBarComp/>
+    <router-view/>
+    <FooterComp/>
   </div>
-  <router-view/>
 </template>
 <script>
+import FooterComp from './components/Footer-Comp.vue';
 import NavBarComp from './components/NavBar-Comp.vue';
 export default {
-  components: {NavBarComp}
+  components: {NavBarComp, FooterComp}
 }
 </script>
 <style>
+::-webkit-scrollbar{
+  display: none;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
