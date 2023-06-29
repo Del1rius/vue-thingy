@@ -14,8 +14,8 @@
             </div>
             </div>
             </router-link>
-            </div>
     </div>
+</div>
 </template>
 <script>
 export default {

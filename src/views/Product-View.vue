@@ -1,20 +1,27 @@
 <template>
     <div v-if="product" class="product_details">
-        <img :src="product.img" :alt="product.name">
-        <div>
-            <h2>{{ product.name }}</h2>
-            <p>Description: {{ product.desc }}</p>
-            <p>Price: € {{ product.price }}</p>
+        <div class="card mx-auto bg-black">
+            <div class="card bg-black text-white border-white border-2 text-center ">
+            <img :src="product.img" :alt="product.name">
+            <h2 class="fs-4">
+                {{ product.name }}
+            </h2>
+                <div class="card-body m-2">
+                    <p>Description: {{ product.desc }}</p>
+                    <p>Price: € {{ product.price }}</p>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 <script>
 export default {
-    props: ["id"],
-
     computed: {
         product() {
             return this.$store.state.product
+        },
+        id(){
+            return this.$route.params.id
         }
     },
 
@@ -23,6 +30,14 @@ export default {
     }
 }
 </script>
-<style >
-    
+<style scoped>
+ .product_details{
+    background-color: #BD2C2C;
+ }
+img {
+    height: 400px !important;
+}
+.card {
+    width: 400px;
+}
 </style>

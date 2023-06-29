@@ -22,7 +22,15 @@ export default createStore({
     getProduct: async (context, id) => {
       fetch("https://del1rius.github.io/Data/db.json")
       .then((res) => res.json())
-      .then((product) => context.commit("setProduct", product))
+      .then((products) => {
+        let product;
+        products.forEach(prod => {
+          if (prod.id == id) {
+            product = prod
+          }
+        });
+        context.commit("setProduct", product)
+      })
     }
   },
 })
