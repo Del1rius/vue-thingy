@@ -1,6 +1,6 @@
 <template>
-    <div v-if="products" class="flex-container">
-        <CardComp v-for="product of products" :key="product.id" :product="product"/>
+    <div v-if="products" class="flex-container row row-cols-3">
+        <CardComp v-for="product of products" :key="product.id" :product="product" />
     </div>
     <div v-else>Loading...</div>
 </template>

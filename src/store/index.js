@@ -15,12 +15,12 @@ export default createStore({
   },
   actions: {
     getProducts: async (context) => {
-      fetch("http://localhost:3000/products")
+      fetch("https://del1rius.github.io/Data/db.json")
       .then((res) => res.json())
       .then((products) => context.commit("setProducts", products));
     },
     getProduct: async (context, id) => {
-      fetch("http://localhost:3000/product")
+      fetch("https://del1rius.github.io/Data/db.json/")
       .then((res) => res.json())
       .then((product) => context.commit("setProduct", product))
     }

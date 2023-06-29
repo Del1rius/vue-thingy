@@ -1,6 +1,6 @@
 <template>
     <div v-if="product" class="product_details">
-        <img :src="product.image_url" :alt="product.name">
+        <img :src="product.img" :alt="product.name">
         <div>
             <h2>{{ product.name }}</h2>
             <p>Description: {{ product.desc }}</p>
