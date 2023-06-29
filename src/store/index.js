@@ -20,7 +20,7 @@ export default createStore({
       .then((products) => context.commit("setProducts", products));
     },
     getProduct: async (context, id) => {
-      fetch("https://del1rius.github.io/Data/db.json/")
+      fetch("https://del1rius.github.io/Data/db.json")
       .then((res) => res.json())
       .then((product) => context.commit("setProduct", product))
     }
